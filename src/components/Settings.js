@@ -10,12 +10,16 @@ export const Settings = () => {
     
     const { changeGreeting } = useContext(UserContext)
      
-
+      let val;
+      const greeting = () =>{
+        val = e.target.value;
+        changeGreeting(val);
+      }
 
     return (
         <div style={{ border: '5px solid red', padding: '8px' }} id="settings">
             <h4>Settings</h4>
-            <input type={'text'} value = {greeting} />
+            <input type={'text'} onChange= {greeting} />
         </div>
     )
 }
