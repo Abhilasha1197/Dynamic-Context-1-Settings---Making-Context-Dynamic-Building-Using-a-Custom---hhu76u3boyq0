@@ -11,7 +11,7 @@ export const Settings = () => {
     const { changeGreeting } = useContext(UserContext)
      
       let val;
-      const greeting = () =>{
+      const greeting = (e) =>{
         val = e.target.value;
         changeGreeting(val);
       }
